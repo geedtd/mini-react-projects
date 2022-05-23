@@ -35,28 +35,10 @@ function App() {
     )
   }
 
-  // useEffect(() => {
-  //   fetch(url)
-  //   .then((resp) => {
-  //     if (resp.status >= 200 && resp.status <= 299){
-  //       return resp.json()
-  //     }
-  //     else {
-  //       setLoading(false)
-  //       throw new Error(resp.statusText)
-  //     }
-  //   })
-  //   .then((tour) => {
-  //     const {id, tourName, info, price} = tour
-  //     setTour(tourName)
-  //   })
-  // })
-
-
 
   return (
     <main>
-      <Tours/>
+      <Tours tours={tours}/>
     </main>
   )
 }

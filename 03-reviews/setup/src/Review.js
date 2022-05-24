@@ -31,7 +31,16 @@ const Review = () => {
     })
     // ((index  > people.length) ? setIndex(index + 1) : setIndex(0))
   }
-  console.log(people.length)
+
+  const randomPerson = () => {
+    setIndex(() => {
+      let newIndex = Math.floor(Math.random()*people.length )
+      if(newIndex === index) {
+        newIndex = newIndex + 1
+      }
+      return checkNumber(newIndex)
+    })
+  }
 
   return (
     <article className='review'>
@@ -52,7 +61,7 @@ const Review = () => {
           <FaChevronRight />
         </button>
       </div>
-        <button className='random-btn'>
+        <button className='random-btn' onClick={randomPerson}>
           surprise me
         </button>
     </article>
